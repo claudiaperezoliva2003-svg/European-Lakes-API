@@ -1,0 +1,3 @@
+# European Lakes API
+
+REST API developed with FastAPI to explore European lakes.
