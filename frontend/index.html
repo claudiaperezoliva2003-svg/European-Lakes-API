@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>European Lakes Explorer | Premium Alpine Discovery</title>
+  <meta name="description" content="Explore the most breathtaking, serene, and majestic lakes across the European continent. From glacial peaks to turquoise gems." />
+
+  <!-- Tailwind (utility helpers only — all custom styles live in styles.css) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- =============================================
+       SITE NAVIGATION
+  ============================================== -->
+  <header role="banner">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="container site-nav__inner">
+
+        <!-- Logo -->
+        <a href="#home" class="site-nav__logo" aria-label="European Lakes Explorer — home">
+          <span class="material-symbols-outlined site-nav__logo-icon" aria-hidden="true">water_lux</span>
+          <span class="site-nav__logo-text">European Lakes</span>
+        </a>
+
+        <!-- Primary links -->
+        <ul class="site-nav__links" role="list">
+          <li><a href="#home"    class="site-nav__link site-nav__link--active" aria-current="page">Home</a></li>
+          <li><a href="#explore" class="site-nav__link">Explore</a></li>
+          <li><a href="#map"     class="site-nav__link">Map</a></li>
+          <li><a href="#docs"    class="site-nav__link">Documentation</a></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="site-nav__actions">
+          <button class="btn-add-discovery" type="button" aria-label="Add a new lake discovery">
+            <span class="material-symbols-outlined" aria-hidden="true">add_circle</span>
+            Add Discovery
+          </button>
+          <div class="site-nav__avatar" role="img" aria-label="User profile">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP0LUCSIpYH3LNDKWY3epSUnAGbirDIrcMNMgQfse_yHga5P3bFRI1feBjOt5IyTw2FwN72MlSGRvXAozRsOVDZNFO2FD4VUtZTA2Y_BR1fF-2AgqX91CQ8ePkJzSuIumuRlS_nb1kmFTbCF58ph8Jd6UvEAUE5aCxmssxq8WoQWBujgfHdV1h5EqGpbGjcFa5_yJA6a-OYh7lh-PvFQLbsJyvherO9n8M--68kNg-nszb71vAHLAUhvgsOj_24ifPvubgbR6aYv0"
+              alt="Profile photo"
+              width="40"
+              height="40"
+            />
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <main id="main-content">
+
+    <!-- ===========================================
+         HERO
+    ============================================ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+
+      <!-- Background imagery -->
+      <div class="hero__bg" aria-hidden="true">
+        <div
+          class="hero__bg-image"
+          style="background-image: url('images/eibsee.png')"
+        ></div>
+        <div class="hero__bg-overlay"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="hero__content">
+        <p class="hero__badge">Majestic Alpine Escapes</p>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__title-sub">Discover Europe's</span>
+          <span class="hero__title-main">Crystal Waters</span>
+        </h1>
+
+        <p class="hero__description">
+          Explore the most breathtaking, serene, and majestic waters across the European continent.
+          From glacial peaks to turquoise gems.
+        </p>
+
+        <div class="hero__cta-group">
+          <a href="#explore" class="btn-primary">Start Exploring</a>
+          <a href="#map"     class="btn-secondary">Interactive Map</a>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ===========================================
+         EXPLORER GALLERY
+    ============================================ -->
+    <section class="gallery" id="explore" aria-labelledby="gallery-title">
+      <div class="container">
+
+        <!-- Header -->
+        <div class="gallery__header">
+          <div>
+            <h2 class="gallery__title" id="gallery-title">Explorer Gallery</h2>
+            <p class="gallery__subtitle">Curated destinations for the eco-conscious traveler seeking pristine turquoise nature.</p>
+          </div>
+          <div class="gallery__search-wrap">
+            <span class="material-symbols-outlined gallery__search-icon" aria-hidden="true">search</span>
+            <label for="lake-search" class="sr-only">Search by lake name or country</label>
+            <input
+              id="lake-search"
+              class="gallery__search"
+              type="search"
+              placeholder="Search by lake name or country…"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <!-- Lake cards -->
+        <ul class="lake-grid" role="list" aria-label="Lake destinations">
+
+          <!-- Card: Eibsee -->
+          <li class="lake-card glass-card">
+            <div class="lake-card__image-wrap">
+              <img
+                class="lake-card__image"
+                src="images/eibsee.png"
+                alt="Eibsee surrounded by Bavarian mountains, Germany"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <div class="lake-card__image-overlay" aria-hidden="true"></div>
+              <div class="lake-card__rating" aria-label="Rating: 4.9 out of 5">
+                <span class="material-symbols-outlined lake-card__rating-star" aria-hidden="true">star</span>
+                <span class="lake-card__rating-value">4.9</span>
+              </div>
+              <span class="lake-card__tag">Glacial</span>
+            </div>
+            <div class="lake-card__body">
+              <div class="lake-card__name-row">
+                <h3 class="lake-card__name">Eibsee</h3>
+                <span class="lake-card__flag" role="img" aria-label="Germany">🇩🇪</span>
+              </div>
+              <p class="lake-card__location">Bavaria, Germany</p>
+              <div class="lake-card__footer">
+                <span class="lake-card__altitude">973 m altitude</span>
+                <div class="lake-card__actions">
+                  <button class="lake-card__action-btn lake-card__action-btn--edit" aria-label="Edit Eibsee">
+                    <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+                  </button>
+                  <button class="lake-card__action-btn lake-card__action-btn--delete" aria-label="Delete Eibsee">
+                    <span class="material-symbols-outlined" aria-hidden="true">delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card: Walchensee -->
+          <li class="lake-card glass-card">
+            <div class="lake-card__image-wrap">
+              <img
+                class="lake-card__image"
+                src="images/walchensee.png"
+                alt="Walchensee turquoise alpine lake, Bavaria"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <div class="lake-card__image-overlay" aria-hidden="true"></div>
+              <div class="lake-card__rating" aria-label="Rating: 5 out of 5">
+                <span class="material-symbols-outlined lake-card__rating-star" aria-hidden="true">star</span>
+                <span class="lake-card__rating-value">5.0</span>
+              </div>
+              <span class="lake-card__tag">Alpine</span>
+            </div>
+            <div class="lake-card__body">
+              <div class="lake-card__name-row">
+                <h3 class="lake-card__name">Walchensee</h3>
+                <span class="lake-card__flag" role="img" aria-label="Germany">🇩🇪</span>
+              </div>
+              <p class="lake-card__location">Bavaria, Germany</p>
+              <div class="lake-card__footer">
+                <span class="lake-card__altitude">801 m altitude</span>
+                <div class="lake-card__actions">
+                  <button class="lake-card__action-btn lake-card__action-btn--edit" aria-label="Edit Walchensee">
+                    <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+                  </button>
+                  <button class="lake-card__action-btn lake-card__action-btn--delete" aria-label="Delete Walchensee">
+                    <span class="material-symbols-outlined" aria-hidden="true">delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card: Lago di Braies -->
+          <li class="lake-card glass-card">
+            <div class="lake-card__image-wrap">
+              <img
+                class="lake-card__image"
+                src="images/lago-di-braies.png"
+                alt="Lago di Braies reflecting the Dolomite peaks, Italy"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <div class="lake-card__image-overlay" aria-hidden="true"></div>
+              <div class="lake-card__rating" aria-label="Rating: 4.8 out of 5">
+                <span class="material-symbols-outlined lake-card__rating-star" aria-hidden="true">star</span>
+                <span class="lake-card__rating-value">4.8</span>
+              </div>
+              <span class="lake-card__tag">Dolomites</span>
+            </div>
+            <div class="lake-card__body">
+              <div class="lake-card__name-row">
+                <h3 class="lake-card__name">Lago di Braies</h3>
+                <span class="lake-card__flag" role="img" aria-label="Italy">🇮🇹</span>
+              </div>
+              <p class="lake-card__location">Prags, Italy</p>
+              <div class="lake-card__footer">
+                <span class="lake-card__altitude">1 496 m altitude</span>
+                <div class="lake-card__actions">
+                  <button class="lake-card__action-btn lake-card__action-btn--edit" aria-label="Edit Lago di Braies">
+                    <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+                  </button>
+                  <button class="lake-card__action-btn lake-card__action-btn--delete" aria-label="Delete Lago di Braies">
+                    <span class="material-symbols-outlined" aria-hidden="true">delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card: Lake Bohinj -->
+          <li class="lake-card glass-card">
+            <div class="lake-card__image-wrap">
+              <img
+                class="lake-card__image"
+                src="images/lake-bohinj.png"
+                alt="Lake Bohinj in the Julian Alps, Slovenia"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <div class="lake-card__image-overlay" aria-hidden="true"></div>
+              <div class="lake-card__rating" aria-label="Rating: 4.7 out of 5">
+                <span class="material-symbols-outlined lake-card__rating-star" aria-hidden="true">star</span>
+                <span class="lake-card__rating-value">4.7</span>
+              </div>
+              <span class="lake-card__tag">Tectonic</span>
+            </div>
+            <div class="lake-card__body">
+              <div class="lake-card__name-row">
+                <h3 class="lake-card__name">Lake Bohinj</h3>
+                <span class="lake-card__flag" role="img" aria-label="Slovenia">🇸🇮</span>
+              </div>
+              <p class="lake-card__location">Julian Alps, Slovenia</p>
+              <div class="lake-card__footer">
+                <span class="lake-card__altitude">526 m altitude</span>
+                <div class="lake-card__actions">
+                  <button class="lake-card__action-btn lake-card__action-btn--edit" aria-label="Edit Lake Bohinj">
+                    <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+                  </button>
+                  <button class="lake-card__action-btn lake-card__action-btn--delete" aria-label="Delete Lake Bohinj">
+                    <span class="material-symbols-outlined" aria-hidden="true">delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card: Seebensee -->
+          <li class="lake-card glass-card">
+            <div class="lake-card__image-wrap">
+              <img
+                class="lake-card__image"
+                src="images/seeensee.png"
+                alt="Seebensee high-altitude lake, Mieming Range, Austria"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <div class="lake-card__image-overlay" aria-hidden="true"></div>
+              <div class="lake-card__rating" aria-label="Rating: 4.9 out of 5">
+                <span class="material-symbols-outlined lake-card__rating-star" aria-hidden="true">star</span>
+                <span class="lake-card__rating-value">4.9</span>
+              </div>
+              <span class="lake-card__tag">Alpine</span>
+            </div>
+            <div class="lake-card__body">
+              <div class="lake-card__name-row">
+                <h3 class="lake-card__name">Seebensee</h3>
+                <span class="lake-card__flag" role="img" aria-label="Austria">🇦🇹</span>
+              </div>
+              <p class="lake-card__location">Mieming Range, Austria</p>
+              <div class="lake-card__footer">
+                <span class="lake-card__altitude">1 657 m altitude</span>
+                <div class="lake-card__actions">
+                  <button class="lake-card__action-btn lake-card__action-btn--edit" aria-label="Edit Seebensee">
+                    <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+                  </button>
+                  <button class="lake-card__action-btn lake-card__action-btn--delete" aria-label="Delete Seebensee">
+                    <span class="material-symbols-outlined" aria-hidden="true">delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card: Oeschinensee -->
+          <li class="lake-card glass-card">
+            <div class="lake-card__image-wrap">
+              <img
+                class="lake-card__image"
+                src="images/oeschinensee.png"
+                alt="Oeschinensee glacial lake near Kandersteg, Switzerland"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <div class="lake-card__image-overlay" aria-hidden="true"></div>
+              <div class="lake-card__rating" aria-label="Rating: 5 out of 5">
+                <span class="material-symbols-outlined lake-card__rating-star" aria-hidden="true">star</span>
+                <span class="lake-card__rating-value">5.0</span>
+              </div>
+              <span class="lake-card__tag">Glacial</span>
+            </div>
+            <div class="lake-card__body">
+              <div class="lake-card__name-row">
+                <h3 class="lake-card__name">Oeschinensee</h3>
+                <span class="lake-card__flag" role="img" aria-label="Switzerland">🇨🇭</span>
+              </div>
+              <p class="lake-card__location">Kandersteg, Switzerland</p>
+              <div class="lake-card__footer">
+                <span class="lake-card__altitude">1 578 m altitude</span>
+                <div class="lake-card__actions">
+                  <button class="lake-card__action-btn lake-card__action-btn--edit" aria-label="Edit Oeschinensee">
+                    <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+                  </button>
+                  <button class="lake-card__action-btn lake-card__action-btn--delete" aria-label="Delete Oeschinensee">
+                    <span class="material-symbols-outlined" aria-hidden="true">delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Card: Blausee -->
+          <li class="lake-card glass-card">
+            <div class="lake-card__image-wrap">
+              <img
+                class="lake-card__image"
+                src="images/blausee.png"
+                alt="Blausee crystal-clear lake in Kandergrund, Switzerland"
+                width="400"
+                height="300"
+                loading="lazy"
+              />
+              <div class="lake-card__image-overlay" aria-hidden="true"></div>
+              <div class="lake-card__rating" aria-label="Rating: 4.8 out of 5">
+                <span class="material-symbols-outlined lake-card__rating-star" aria-hidden="true">star</span>
+                <span class="lake-card__rating-value">4.8</span>
+              </div>
+              <span class="lake-card__tag">Crystal</span>
+            </div>
+            <div class="lake-card__body">
+              <div class="lake-card__name-row">
+                <h3 class="lake-card__name">Blausee</h3>
+                <span class="lake-card__flag" role="img" aria-label="Switzerland">🇨🇭</span>
+              </div>
+              <p class="lake-card__location">Kandergrund, Switzerland</p>
+              <div class="lake-card__footer">
+                <span class="lake-card__altitude">887 m altitude</span>
+                <div class="lake-card__actions">
+                  <button class="lake-card__action-btn lake-card__action-btn--edit" aria-label="Edit Blausee">
+                    <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
+                  </button>
+                  <button class="lake-card__action-btn lake-card__action-btn--delete" aria-label="Delete Blausee">
+                    <span class="material-symbols-outlined" aria-hidden="true">delete</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul><!-- /.lake-grid -->
+      </div>
+    </section>
+
+
+    <!-- ===========================================
+         MANAGEMENT & API
+    ============================================ -->
+    <section class="management" id="map" aria-label="Lake management and API">
+      <div class="container">
+        <div class="management__grid">
+
+          <!-- Register Discovery form -->
+          <div class="register-card glass-card">
+            <div class="register-card__header">
+              <div class="register-card__icon" aria-hidden="true">
+                <span class="material-symbols-outlined">add_location_alt</span>
+              </div>
+              <h2 class="register-card__title">Register Discovery</h2>
+            </div>
+
+            <form class="register-form" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="lake-name">Lake Name</label>
+                  <input id="lake-name" class="form-input" type="text" name="lakeName" placeholder="e.g. Lake Brienz" autocomplete="off" />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="country">Country</label>
+                  <input id="country" class="form-input" type="text" name="country" placeholder="e.g. Switzerland" autocomplete="country-name" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="region">Region</label>
+                  <input id="region" class="form-input" type="text" name="region" placeholder="e.g. Bernese Oberland" autocomplete="off" />
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="lake-type">Lake Type</label>
+                  <select id="lake-type" class="form-select" name="lakeType">
+                    <option value="glacial">Glacial</option>
+                    <option value="alpine">Alpine</option>
+                    <option value="volcanic">Volcanic</option>
+                    <option value="tectonic">Tectonic</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="image-url">Image URL</label>
+                <input id="image-url" class="form-input" type="url" name="imageUrl" placeholder="https://…" autocomplete="off" />
+              </div>
+
+              <button class="btn-submit" type="submit">Add to Database</button>
+            </form>
+          </div><!-- /.register-card -->
+
+
+          <!-- API Documentation -->
+          <aside class="api-card" id="docs" aria-labelledby="api-title">
+            <div class="api-card__header">
+              <div class="api-card__icon" aria-hidden="true">
+                <span class="material-symbols-outlined">api</span>
+              </div>
+              <h2 class="api-card__title" id="api-title">Developer API</h2>
+            </div>
+
+            <p class="api-card__description">
+              Integrate our precise ecological data into your own applications. Our REST API follows
+              standard semantic conventions and provides high-resolution metadata for alpine research.
+            </p>
+
+            <ul class="api-endpoints" role="list" aria-label="API endpoints">
+              <li class="api-endpoint" role="button" tabindex="0" aria-label="GET /api/v1/lakes — copy path">
+                <div class="api-endpoint__left">
+                  <span class="api-method">GET</span>
+                  <span class="api-endpoint__path">/api/v1/lakes</span>
+                </div>
+                <span class="api-endpoint__desc">Fetch directory</span>
+              </li>
+              <li class="api-endpoint" role="button" tabindex="0" aria-label="POST /api/v1/lakes — copy path">
+                <div class="api-endpoint__left">
+                  <span class="api-method">POST</span>
+                  <span class="api-endpoint__path">/api/v1/lakes</span>
+                </div>
+                <span class="api-endpoint__desc">Create entry</span>
+              </li>
+            </ul>
+
+            <button class="btn-api-portal" type="button">Access API Portal</button>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =============================================
+       FOOTER
+  ============================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__inner">
+
+      <div class="site-footer__brand">
+        <a href="#home" class="site-footer__logo" aria-label="European Lakes Explorer — back to top">
+          <span class="material-symbols-outlined site-footer__logo-icon" aria-hidden="true">waves</span>
+          <span class="site-footer__logo-text">European Lakes</span>
+        </a>
+        <p class="site-footer__copy">
+          © 2024 European Lakes Explorer. Dedicated to majestic, serene, and precise eco-tourism.
+          Preserving alpine heritage through turquoise data.
+        </p>
+      </div>
+
+      <nav class="site-footer__links" aria-label="Footer navigation">
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Navigation</p>
+          <a class="site-footer__link" href="#">Conservation</a>
+          <a class="site-footer__link" href="#">Transparency</a>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__col-title">Resources</p>
+          <a class="site-footer__link" href="#">API Status</a>
+          <a class="site-footer__link" href="#">Media Kit</a>
+        </div>
+      </nav>
+
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js" defer></script>
+
+</body>
+</html>
