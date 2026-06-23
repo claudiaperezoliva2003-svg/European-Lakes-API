@@ -9,10 +9,7 @@
   <!-- Tailwind (utility helpers only — all custom styles live in styles.css) -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  
 
   <!-- Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
@@ -40,7 +37,6 @@
         <ul class="site-nav__links" role="list">
           <li><a href="#home"    class="site-nav__link site-nav__link--active" aria-current="page">Home</a></li>
           <li><a href="#explore" class="site-nav__link">Explore</a></li>
-          <li><a href="#map"     class="site-nav__link">Map</a></li>
           <li><a href="#docs"    class="site-nav__link">Documentation</a></li>
         </ul>
 
@@ -50,14 +46,6 @@
             <span class="material-symbols-outlined" aria-hidden="true">add_circle</span>
             Add Discovery
           </button>
-          <div class="site-nav__avatar" role="img" aria-label="User profile">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP0LUCSIpYH3LNDKWY3epSUnAGbirDIrcMNMgQfse_yHga5P3bFRI1feBjOt5IyTw2FwN72MlSGRvXAozRsOVDZNFO2FD4VUtZTA2Y_BR1fF-2AgqX91CQ8ePkJzSuIumuRlS_nb1kmFTbCF58ph8Jd6UvEAUE5aCxmssxq8WoQWBujgfHdV1h5EqGpbGjcFa5_yJA6a-OYh7lh-PvFQLbsJyvherO9n8M--68kNg-nszb71vAHLAUhvgsOj_24ifPvubgbR6aYv0"
-              alt="Profile photo"
-              width="40"
-              height="40"
-            />
-          </div>
         </div>
 
       </div>
@@ -97,7 +85,6 @@
 
         <div class="hero__cta-group">
           <a href="#explore" class="btn-primary">Start Exploring</a>
-          <a href="#map"     class="btn-secondary">Interactive Map</a>
         </div>
       </div>
 
@@ -113,20 +100,21 @@
         <!-- Header -->
         <div class="gallery__header">
           <div>
-            <h2 class="gallery__title" id="gallery-title">Explorer Gallery</h2>
-            <p class="gallery__subtitle">Curated destinations for the eco-conscious traveler seeking pristine turquoise nature.</p>
+          <h2 class="gallery__title" id="gallery-title">
+             Explorer Gallery
+            </h2>
           </div>
-          <div class="gallery__search-wrap">
-            <span class="material-symbols-outlined gallery__search-icon" aria-hidden="true">search</span>
+            <div class="gallery__search-wrap">
             <label for="lake-search" class="sr-only">Search by lake name or country</label>
             <input
-              id="lake-search"
-              class="gallery__search"
-              type="search"
-              placeholder="Search by lake name or country…"
-              autocomplete="off"
-            />
-          </div>
+             id="lake-search"
+             class="gallery__search"
+             type="search"
+             placeholder="Search by lake name or country…"
+             autocomplete="off"
+             />
+             <span class="material-symbols-outlined gallery__search-icon" aria-hidden="true">search</span>
+            </div>
         </div>
 
         <!-- Lake cards -->
@@ -213,7 +201,7 @@
             <div class="lake-card__image-wrap">
               <img
                 class="lake-card__image"
-                src="images/lago-di-braies.png"
+                src="images/braies.png"
                 alt="Lago di Braies reflecting the Dolomite peaks, Italy"
                 width="400"
                 height="300"
@@ -251,7 +239,7 @@
             <div class="lake-card__image-wrap">
               <img
                 class="lake-card__image"
-                src="images/lake-bohinj.png"
+                src="images/bohinj.png"
                 alt="Lake Bohinj in the Julian Alps, Slovenia"
                 width="400"
                 height="300"
@@ -289,7 +277,7 @@
             <div class="lake-card__image-wrap">
               <img
                 class="lake-card__image"
-                src="images/seeensee.png"
+                src="images/seebensee.png"
                 alt="Seebensee high-altitude lake, Mieming Range, Austria"
                 width="400"
                 height="300"
